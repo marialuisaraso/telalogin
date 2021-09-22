@@ -22,7 +22,7 @@ body{
     background-color: #ffffff90;
     padding: 30px;
     border-radius: 5%;
-    box-shadow: 3px 3px 3px 3px #00000020;
+    box-shadow: 20px 20px 50px -40px #d6b4bf7c;
 }
 
 h1{
@@ -77,7 +77,7 @@ h1{
 button{
     background-color: transparent;
     border-color: #272262;
-    border-width: 1.5px;
+    border-width: 2px;
     color: #272262;
     padding: 7px;
     font-weight: 500;
@@ -110,6 +110,7 @@ p{
     font-size: 12pt;
     text-align: center;
     font-style: italic;
+    margin-bottom: 10%;
 }
 
 a{
@@ -126,8 +127,46 @@ a:hover{
 
 .fa-eye{
     position: absolute;
-    top: 15px;
-    right: 10px;
+    top: 17px;
+    right: 25px;
     cursor: pointer;
     color: #272262;
+}
+
+
+main .social-media a {
+    text-decoration: none;
+    font-size: 26px;
+    margin-left: 69px;
+}
+
+
+main .alternative {
+    margin-bottom: 1rem;
+}
+
+main .alternative span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.452);
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+
+main .alternative span::before, main .alternative span::after {
+    
+    content: '';
+    height: 1px;
+    width: 100px;
+    bottom: 50%;
+    margin-top: 9px;
+    background: rgba(255, 255, 255, 0.3);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+main .alternative span::after {
+    right: 0;
 }
