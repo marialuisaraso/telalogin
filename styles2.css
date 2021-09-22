@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: blueviolet;
+    background-color: rgb(226, 43, 195);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -23,6 +23,7 @@ body{
     padding: 30px;
     border-radius: 5%;
     box-shadow: 3px 3px 3px 3px #00000020;
+    width: 400px;
 }
 
 h1{
@@ -105,29 +106,10 @@ button:hover{
     width: 100%;
 }
 
-p{
-    color: #272262;
-    font-size: 12pt;
-    text-align: center;
-    font-style: italic;
-}
-
-a{
-    color: #7a3077;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all .3s ease-out;
-}
-
-a:hover{
-    color: #272262;
-    
-}
-
 .fa-eye{
     position: absolute;
-    top: 15px;
-    right: 10px;
+    top: 17px;
+    right: 25px;
     cursor: pointer;
     color: #272262;
 }

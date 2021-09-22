@@ -5,19 +5,22 @@
     <meta charset="utf-8"> <!--Indica ao Browser que devem ser interpretados caracteres especiais. CHARSET é o conjunto de caracteres no qual o 
         browser deve se basear para interpretar o documento-->
     <!-- A tag meta é usada para os metadados da página, como autor, palavras-chave..., a serem utilizadas pelos mecanismos que vão ler a página-->
-    <title>Login</title> <!-- Esse título é utilizado, inclusive, pelo navegador para exibir o título da página: browser, google...-->
-    <link href ="styles.css" rel = "stylesheet">
+    <title>Cadastro</title> <!-- Esse título é utilizado, inclusive, pelo navegador para exibir o título da página: browser, google...-->
+    <link href ="styles2.css" rel = "stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://use.fontawesome.com/ffb2d59d6a.js"></script>
+
 </head>
 
 <body> <!-- Indica o corpo da página. Tudo que estiver aqui, será renderizado, exibido pelo browser na área principal da página-->
-    
-
-    
     <div class='container'>
         <div class='card'>
-            <h1>LOGIN</h1>
+            <h1>CADASTRO</h1>
+
+            <div class='label-float'>
+                <input type='text' id='nome' placeholder=' ' required>
+                <label for='nome'>Nome</label>
+            </div>
 
             <div class='label-float'>
                 <input type='text' id='usuario' placeholder=' ' required>
@@ -27,14 +30,30 @@
             <div class='label-float'>
                 <input type='password' id='senha' placeholder=' ' required>
                 <label for='senha'>Senha</label>
-                <i class="fa fa-eye" aria-hidden="true"></i>
+                <i id="versenha" class="fa fa-eye" aria-hidden="true"></i>
+            </div>
+
+            <div class='label-float'>
+                <input type='password' id='repetir-senha' placeholder=' ' required>
+                <label for='repetir-senha'>Repetir senha</label>
+                <i id="verrepetirsenha"class="fa fa-eye" aria-hidden="true"></i>
             </div>
 
             <script>
 
-                let btn = document.querySelector('.fa-eye')
+                let btn = document.querySelector('#versenha')
                 btn.addEventListener('click', ()=>{
                     let inputSenha = document.querySelector('#senha')
+                    if(inputSenha.getAttribute('type') == 'password'){
+                        inputSenha.setAttribute('type', 'text')
+                    } else{
+                        inputSenha.setAttribute('type', 'password')
+                    }
+                })
+
+                let btn2 = document.querySelector('#verrepetirsenha')
+                btn2.addEventListener('click', ()=>{
+                    let inputSenha = document.querySelector('#repetir-senha')
                     if(inputSenha.getAttribute('type') == 'password'){
                         inputSenha.setAttribute('type', 'text')
                     } else{
@@ -45,16 +64,9 @@
             </script>
 
             <div class='justify-center'>
-                <button>ENTRAR</button>
+                <button>CONFIRMAR</button>
             </div>
 
-            <div class='linha'>
-                <hr>
-            </div>
-
-            <p>Não tem uma conta?
-                <a href="index2.html">Cadastre-se</a>
-            </p>
         </div>
 
     </div>
